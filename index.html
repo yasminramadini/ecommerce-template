@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clothes Shop</title>
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="../bootstrap-5/css/bootstrap.min.css">
+  <!-- icons -->
+  <link rel="stylesheet" href="../fontawesome-free-6.0.0-beta3-web/fontawesome-free-6.0.0-beta3-web/css/all.min.css">
+  <!-- css -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- body overlay -->
+  <div class="overlay"></div>
+  <!-- end body overlay -->
+
+  <!-- navbar -->
+  <nav class="text-white p-3 fixed-top"> 
+    <div class="container d-flex justify-content-between align-items-center">
+      <span class="logo"><i class="fas fa-tshirt me-3"></i>Reclothes</span>
+      <div class="nav-icons">
+        <span class="fas fa-heart"></span>
+        <span class="fas fa-shopping-cart"></span>
+        <span class="fas fa-bars" id="nav-logo"></span>
+      </div>
+    </div>
+  </nav>
+  <!-- end navbar -->
+
+  <!-- sidebar -->
+  <aside class="bg-white position-fixed">
+    <div class="search d-flex mb-4 justify-content-between">
+      <input type="text" placeholder="Search products...">
+      <button class="fas fa-search"></button>
+    </div>
+    <nav class="nav flex-column bg-white">
+      <a href="#" class="nav-link text-dark">Home</a>
+      <a href="#" class="nav-link text-dark">Blogs</a>
+      <a href="#productCollapse" class="nav-link text-dark d-flex justify-content-between nav-collapse" data-bs-toggle="collapse"><span>Products</span> <i class="fas fa-chevron-down"></i></a>
+      <div class="collapse ps-4" id="productCollapse">
+        <a href="#" class="nav-link text-dark">Popular Products</a>
+        <a href="#" class="nav-link text-dark">Latest Products</a>
+        <a href="#" class="nav-link text-dark">Exclusive Products</a>
+      </div>
+      <a href="#activityCollapse" class="nav-link text-dark d-flex justify-content-between nav-collapse" data-bs-toggle="collapse"><span>Activity</span> <i class="fas fa-chevron-down"></i></a>
+      <div class="collapse ps-4" id="activityCollapse">
+        <a href="#" class="nav-link text-dark">Formal</a>
+        <a href="#" class="nav-link text-dark">Semi Formal</a>
+        <a href="#" class="nav-link text-dark">Casual</a>
+        <a href="#" class="nav-link text-dark">Pajamas</a>
+        <a href="#" class="nav-link text-dark">Islamic</a>
+      </div>
+      <a href="#languageCollapse" class="nav-link text-dark d-flex justify-content-between nav-collapse" data-bs-toggle="collapse"><span>Languages</span> <i class="fas fa-chevron-down"></i></a>
+      <div class="collapse ps-4" id="languageCollapse">
+        <a href="#" class="nav-link text-dark">English</a>
+        <a href="#" class="nav-link text-dark">Indonesia</a>
+        <a href="#" class="nav-link text-dark">China</a>
+        <a href="#" class="nav-link text-dark">India</a>
+        <a href="#" class="nav-link text-dark">Arabic</a>
+      </div>
+      <a href="#" class="nav-link text-dark">Create Store</a>
+    </nav>
+  </aside>
+  <!-- end sidebar -->
+
+  <!-- header -->
+  <header class="container">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="bg-1 position-relative d-flex align-items-center">
+            <div class="p-5">
+              <h3 class="display-3 pb-4"><strong>Don't miss amazing shopping deal</strong></h3>
+              <span class="fs-4">Sign up for daily newsletter</span>
+            </div>
+            <img src="images/shopping-bag.png" id="bg1-img">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="bg-2 position-relative d-flex align-items-center">
+            <div class="p-5">
+              <h3 class="display-3 pb-4"><strong>Various style and get big discount</strong></h3>
+              <span class="fs-4">Save up to 30% off on your first shopping</span>
+            </div>
+            <img src="images/banner-3.png">
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </header>
+  <!-- end header -->
+
+  <!-- categories -->
+  <section class="categories container mt-5">
+    <h3 class="mt-5">Featured Categories</h3>
+    <div class="d-flex justify-content-between mt-4 table-responsive" style="gap: 1.5rem;">
+      <div class="category p-3">
+        <img src="images/shirt-1.png">
+        <p class="mt-4 text-center">Shirt</p>
+      </div>
+      <div class="category p-3">
+        <img src="images/kids-1.png">
+        <p class="mt-4 text-center">Kids</p>
+      </div>
+      <div class="category p-3">
+        <img src="images/hoodie-2.png">
+        <p class="mt-4 text-center">Hoodie</p>
+      </div>
+      <div class="category p-3">
+        <img src="images/jas-1.png">
+        <p class="mt-4 text-center">Blazer</p>
+      </div>
+      <div class="category p-3">
+        <img src="images/dress-2.png">
+        <p class="mt-4 text-center">Dress</p>
+      </div>
+    </div>
+  </section>
+  <!-- end categories -->
+
+  <!-- promo -->
+  <section class="container mt-5" id="promo">
+    <h3 class="mb-4">Special promo for you</h3>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="promo-1">
+          <div class="info-box bg-white shadow p-3">
+            <h4><strong>12.12 special man sale</strong></h4>
+            <div class="promo-icons">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <a href="#" class="cta btn mt-4">Shopping Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="promo-1">
+          <div class="info-box bg-white shadow p-3">
+            <h4><strong>Big discount special end year</strong></h4>
+            <div class="promo-icons">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <a href="#" class="cta btn mt-4">Shopping Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end promo -->
+
+  <!-- popular products -->
+  <div class="container" id="products">
+    <h3 class="mb-4">Popular Products</h3>
+    <div class="row g-3">
+      <div class="col-lg-3 col-md-6">
+        <div class="card p-3">
+          <img src="images/shirt-2.png">
+          <div class="card-body">
+            <span class="text-muted">Shirt</span>
+            <h4 class="my-2">Red shirt</h4>
+            <div class="stars mb-3">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half"></i>
+              <span class="text-muted">(4.5)</span>
+            </div>
+            <p><span class="text-muted">By </span><span class="brand">Elzafeer</span></p>
+            <div class="d-flex justify-content-between align-items-start">
+              <div>
+                <p class="price fs-5 m-0"><strong>$20.75</strong></p>
+                <p class="text-muted m-0"><del>$25.54</del></p>
+              </div>
+              <a href="#" class="btn cta"><i class="fas fa-shopping-cart me-2"></i>Add</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="card p-3">
+          <img src="images/hoodie-2.png">
+          <div class="card-body">
+            <span class="text-muted">Hoodie</span>
+            <h4 class="my-2">Red Hoodie</h4>
+            <div class="stars mb-3">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half"></i>
+              <span class="text-muted">(4.5)</span>
+            </div>
+            <p><span class="text-muted">By </span><span class="brand">Elzafeer</span></p>
+            <div class="d-flex justify-content-between align-items-start">
+              <div>
+                <p class="price fs-5 m-0"><strong>$20.75</strong></p>
+                <p class="text-muted m-0"><del>$25.54</del></p>
+              </div>
+              <a href="#" class="btn cta"><i class="fas fa-shopping-cart me-2"></i>Add</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="card p-3">
+          <img src="images/kids-2.png">
+          <div class="card-body">
+            <span class="text-muted">Kids</span>
+            <h4 class="my-2">Yellow Clothes</h4>
+            <div class="stars mb-3">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span class="text-muted">(5.0)</span>
+            </div>
+            <p><span class="text-muted">By </span><span class="brand">Elzafeer</span></p>
+            <div class="d-flex justify-content-between align-items-start">
+              <div>
+                <p class="price fs-5 m-0"><strong>$20.75</strong></p>
+                <p class="text-muted m-0"><del>$25.54</del></p>
+              </div>
+              <a href="#" class="btn cta"><i class="fas fa-shopping-cart me-2"></i>Add</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="card p-3">
+          <img src="images/dress-1.png">
+          <div class="card-body">
+            <span class="text-muted">Dress</span>
+            <h4 class="my-2">Brown dress</h4>
+            <div class="stars mb-3">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half"></i>
+              <span class="text-muted">(4.5)</span>
+            </div>
+            <p><span class="text-muted">By </span><span class="brand">Elzafeer</span></p>
+            <div class="d-flex justify-content-between align-items-start">
+              <div>
+                <p class="price fs-5 m-0"><strong>$20.75</strong></p>
+                <p class="text-muted m-0"><del>$25.54</del></p>
+              </div>
+              <a href="#" class="btn cta"><i class="fas fa-shopping-cart me-2"></i>Add</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="card p-3">
+          <img src="images/jas-2.png">
+          <div class="card-body">
+            <span class="text-muted">Blazer</span>
+            <h4 class="my-2">Dark blazer</h4>
+            <div class="stars mb-3">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half"></i>
+              <span class="text-muted">(4.5)</span>
+            </div>
+            <p><span class="text-muted">By </span><span class="brand">Elzafeer</span></p>
+            <div class="d-flex justify-content-between align-items-start">
+              <div>
+                <p class="price fs-5 m-0"><strong>$20.75</strong></p>
+                <p class="text-muted m-0"><del>$25.54</del></p>
+              </div>
+              <a href="#" class="btn cta"><i class="fas fa-shopping-cart me-2"></i>Add</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="card p-3">
+          <img src="images/shirt-3.png">
+          <div class="card-body">
+            <span class="text-muted">Shirt</span>
+            <h4 class="my-2">Blue shirt</h4>
+            <div class="stars mb-3">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half"></i>
+              <span class="text-muted">(4.5)</span>
+            </div>
+            <p><span class="text-muted">By </span><span class="brand">Elzafeer</span></p>
+            <div class="d-flex justify-content-between align-items-start">
+              <div>
+                <p class="price fs-5 m-0"><strong>$20.75</strong></p>
+                <p class="text-muted m-0"><del>$25.54</del></p>
+              </div>
+              <a href="#" class="btn cta"><i class="fas fa-shopping-cart me-2"></i>Add</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="card p-3">
+          <img src="images/hoodie-3.png">
+          <div class="card-body">
+            <span class="text-muted">Hoodie</span>
+            <h4 class="my-2">Orange hoodie</h4>
+            <div class="stars mb-3">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half"></i>
+              <span class="text-muted">(4.5)</span>
+            </div>
+            <p><span class="text-muted">By </span><span class="brand">Elzafeer</span></p>
+            <div class="d-flex justify-content-between align-items-start">
+              <div>
+                <p class="price fs-5 m-0"><strong>$20.75</strong></p>
+                <p class="text-muted m-0"><del>$25.54</del></p>
+              </div>
+              <a href="#" class="btn cta"><i class="fas fa-shopping-cart me-2"></i>Add</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="card p-3">
+          <img src="images/kids-3.png">
+          <div class="card-body">
+            <span class="text-muted">Kids</span>
+            <h4 class="my-2">Blue dress</h4>
+            <div class="stars mb-3">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half"></i>
+              <span class="text-muted">(4.5)</span>
+            </div>
+            <p><span class="text-muted">By </span><span class="brand">Elzafeer</span></p>
+            <div class="d-flex justify-content-between align-items-start">
+              <div>
+                <p class="price fs-5 m-0"><strong>$20.75</strong></p>
+                <p class="text-muted m-0"><del>$25.54</del></p>
+              </div>
+              <a href="#" class="btn cta"><i class="fas fa-shopping-cart me-2"></i>Add</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="card p-3">
+          <img src="images/dress-3.png">
+          <div class="card-body">
+            <span class="text-muted">Dress</span>
+            <h4 class="my-2">Red dress</h4>
+            <div class="stars mb-3">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half"></i>
+              <span class="text-muted">(4.5)</span>
+            </div>
+            <p><span class="text-muted">By </span><span class="brand">Elzafeer</span></p>
+            <div class="d-flex justify-content-between align-items-start">
+              <div>
+                <p class="price fs-5 m-0"><strong>$20.75</strong></p>
+                <p class="text-muted m-0"><del>$25.54</del></p>
+              </div>
+              <a href="#" class="btn cta"><i class="fas fa-shopping-cart me-2"></i>Add</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="card p-3">
+          <img src="images/jas-3.png">
+          <div class="card-body">
+            <span class="text-muted">Blazer</span>
+            <h4 class="my-2">Black blazer</h4>
+            <div class="stars mb-3">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half"></i>
+              <span class="text-muted">(4.5)</span>
+            </div>
+            <p><span class="text-muted">By </span><span class="brand">Elzafeer</span></p>
+            <div class="d-flex justify-content-between align-items-start">
+              <div>
+                <p class="price fs-5 m-0"><strong>$20.75</strong></p>
+                <p class="text-muted m-0"><del>$25.54</del></p>
+              </div>
+              <a href="#" class="btn cta"><i class="fas fa-shopping-cart me-2"></i>Add</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="card p-3">
+          <img src="images/shirt-4.png">
+          <div class="card-body">
+            <span class="text-muted">Shirt</span>
+            <h4 class="my-2">Pink shirt</h4>
+            <div class="stars mb-3">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half"></i>
+              <span class="text-muted">(4.5)</span>
+            </div>
+            <p><span class="text-muted">By </span><span class="brand">Elzafeer</span></p>
+            <div class="d-flex justify-content-between align-items-start">
+              <div>
+                <p class="price fs-5 m-0"><strong>$20.75</strong></p>
+                <p class="text-muted m-0"><del>$25.54</del></p>
+              </div>
+              <a href="#" class="btn cta"><i class="fas fa-shopping-cart me-2"></i>Add</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="card p-3">
+          <img src="images/hoodie-4.png">
+          <div class="card-body">
+            <span class="text-muted">Hoodie</span>
+            <h4 class="my-2">Gray hoodie</h4>
+            <div class="stars mb-3">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half"></i>
+              <span class="text-muted">(4.5)</span>
+            </div>
+            <p><span class="text-muted">By </span><span class="brand">Elzafeer</span></p>
+            <div class="d-flex justify-content-between align-items-start">
+              <div>
+                <p class="price fs-5 m-0"><strong>$20.75</strong></p>
+                <p class="text-muted m-0"><del>$25.54</del></p>
+              </div>
+              <a href="#" class="btn cta"><i class="fas fa-shopping-cart me-2"></i>Add</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="card p-3">
+          <img src="images/kids-4.png">
+          <div class="card-body">
+            <span class="text-muted">Kids</span>
+            <h4 class="my-2">Pink blouse</h4>
+            <div class="stars mb-3">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half"></i>
+              <span class="text-muted">(4.5)</span>
+            </div>
+            <p><span class="text-muted">By </span><span class="brand">Elzafeer</span></p>
+            <div class="d-flex justify-content-between align-items-start">
+              <div>
+                <p class="price fs-5 m-0"><strong>$20.75</strong></p>
+                <p class="text-muted m-0"><del>$25.54</del></p>
+              </div>
+              <a href="#" class="btn cta"><i class="fas fa-shopping-cart me-2"></i>Add</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="card p-3">
+          <img src="images/dress-4.png">
+          <div class="card-body">
+            <span class="text-muted">Dress</span>
+            <h4 class="my-2">Black dress</h4>
+            <div class="stars mb-3">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half"></i>
+              <span class="text-muted">(4.5)</span>
+            </div>
+            <p><span class="text-muted">By </span><span class="brand">Elzafeer</span></p>
+            <div class="d-flex justify-content-between align-items-start">
+              <div>
+                <p class="price fs-5 m-0"><strong>$20.75</strong></p>
+                <p class="text-muted m-0"><del>$25.54</del></p>
+              </div>
+              <a href="#" class="btn cta"><i class="fas fa-shopping-cart me-2"></i>Add</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="card p-3">
+          <img src="images/jas-4.png">
+          <div class="card-body">
+            <span class="text-muted">Blazer</span>
+            <h4 class="my-2">Black blazer</h4>
+            <div class="stars mb-3">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half"></i>
+              <span class="text-muted">(4.5)</span>
+            </div>
+            <p><span class="text-muted">By </span><span class="brand">Elzafeer</span></p>
+            <div class="d-flex justify-content-between align-items-start">
+              <div>
+                <p class="price fs-5 m-0"><strong>$20.75</strong></p>
+                <p class="text-muted m-0"><del>$25.54</del></p>
+              </div>
+              <a href="#" class="btn cta"><i class="fas fa-shopping-cart me-2"></i>Add</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="card p-3">
+          <img src="images/shirt-5.png">
+          <div class="card-body">
+            <span class="text-muted">Shirt</span>
+            <h4 class="my-2">Light blue shirt</h4>
+            <div class="stars mb-3">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half"></i>
+              <span class="text-muted">(4.5)</span>
+            </div>
+            <p><span class="text-muted">By </span><span class="brand">Elzafeer</span></p>
+            <div class="d-flex justify-content-between align-items-start">
+              <div>
+                <p class="price fs-5 m-0"><strong>$20.75</strong></p>
+                <p class="text-muted m-0"><del>$25.54</del></p>
+              </div>
+              <a href="#" class="btn cta"><i class="fas fa-shopping-cart me-2"></i>Add</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end popular products -->
+
+  <!-- trending and top -->
+  <section class="container mt-5" id="trending">
+    <div class="row">
+      <div class="col-lg-6 mt-4">
+        <h4 class="border-bottom border-secondary pb-2 position-relative">Top Products</h4>
+        <div class="card p-3 mt-4">
+          <div class="row g-3">
+            <div class="col-3">
+              <img src="images/hoodie-5.png">
+            </div>
+            <div class="col-9">
+              <p class="fs-4"><strong>Yellow Hoodie</strong></p>
+              <span class="price me-2 fs-5"><strong>$15.80</strong></span>
+              <span class="text-muted"><del>$17.50</del></span>
+            </div>
+          </div>
+        </div>
+        <div class="card p-3 mt-4">
+          <div class="row g-3">
+            <div class="col-3">
+              <img src="images/dress-5.png">
+            </div>
+            <div class="col-9">
+              <p class="fs-4"><strong>Blue dress</strong></p>
+              <span class="price me-2 fs-5"><strong>$15.80</strong></span>
+              <span class="text-muted"><del>$17.50</del></span>
+            </div>
+          </div>
+        </div>
+        <div class="card p-3 mt-4">
+          <div class="row g-3">
+            <div class="col-3">
+              <img src="images/jas-5.png">
+            </div>
+            <div class="col-9">
+              <p class="fs-4"><strong>Gray Tuxedo</strong></p>
+              <span class="price me-2 fs-5"><strong>$15.80</strong></span>
+              <span class="text-muted"><del>$17.50</del></span>
+            </div>
+          </div>
+        </div>
+        <div class="card p-3 mt-4">
+          <div class="row g-3">
+            <div class="col-3">
+              <img src="images/dress-6.png">
+            </div>
+            <div class="col-9">
+              <p class="fs-4"><strong>Black Tuxedo</strong></p>
+              <span class="price me-2 fs-5"><strong>$15.80</strong></span>
+              <span class="text-muted"><del>$17.50</del></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 mt-4">
+        <h4 class="border-bottom border-secondary pb-2 position-relative">Trending Products</h4>
+        <div class="card p-3 mt-4">
+          <div class="row g-3">
+            <div class="col-3">
+              <img src="images/dress-7.png">
+            </div>
+            <div class="col-9">
+              <p class="fs-4"><strong>Black dress</strong></p>
+              <span class="price me-2 fs-5"><strong>$15.80</strong></span>
+              <span class="text-muted"><del>$17.50</del></span>
+            </div>
+          </div>
+        </div>
+        <div class="card p-3 mt-4">
+          <div class="row g-3">
+            <div class="col-3">
+              <img src="images/jas-6.png">
+            </div>
+            <div class="col-9">
+              <p class="fs-4"><strong>Gray blazer</strong></p>
+              <span class="price me-2 fs-5"><strong>$15.80</strong></span>
+              <span class="text-muted"><del>$17.50</del></span>
+            </div>
+          </div>
+        </div>
+        <div class="card p-3 mt-4">
+          <div class="row g-3">
+            <div class="col-3">
+              <img src="images/jas-7.png">
+            </div>
+            <div class="col-9">
+              <p class="fs-4"><strong>Black blazer</strong></p>
+              <span class="price me-2 fs-5"><strong>$15.80</strong></span>
+              <span class="text-muted"><del>$17.50</del></span>
+            </div>
+          </div>
+        </div>
+        <div class="card p-3 mt-4">
+          <div class="row g-3">
+            <div class="col-3">
+              <img src="images/hoodie-6.png">
+            </div>
+            <div class="col-9">
+              <p class="fs-4"><strong>Gray hoodie</strong></p>
+              <span class="price me-2 fs-5"><strong>$15.80</strong></span>
+              <span class="text-muted"><del>$17.50</del></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end trending and top -->
+
+  <!-- subscribe -->
+  <section class="container mt-5 position-relative d-flex justify-content-between align-items-center" id="subscribe">
+    <img src="images/banner-1.png">
+    <div class="content p-3">
+      <h3 class="display-5 mb-3"><strong>Subscribe for get newsletter and new promo</strong></h3>
+      <form action="" class="bg-white d-flex justify-content-between align-items-center">
+        <span class="fas fa-envelope ps-3 pe-1 text-secondary"></span>
+        <input type="email" class="px-3" placeholder="Enter your email...">
+        <button class="btn cta">Subscribe</button>
+      </form>
+    </div>
+  </section>
+  <!-- end subscribe -->
+
+  <!-- services -->
+  <section class="container mt-5" id="services">
+      <div class="card-group">
+       <div class="card shadow p-3">
+         <div class="row justify-content-between align-items-center">
+           <div class="col-3">
+            <img src="images/sale.png">
+           </div>
+           <div class="col-9">
+            <h3 class="card-title">Best prices and offers</h3>
+            <p class="text-muted">orders $50 or more.</p>
+           </div>
+         </div>
+       </div>
+       <div class="card shadow p-3">
+         <div class="row justify-content-between align-items-center">
+           <div class="col-3">
+            <img src="images/deliver-logo.png">
+           </div>
+           <div class="col-9">
+            <h3 class="card-title">Free delivery</h3>
+            <p class="text-muted">24/7 amazing services</p>
+           </div>
+         </div>
+       </div>
+       <div class="card shadow p-3">
+         <div class="row justify-content-between align-items-center">
+           <div class="col-3">
+            <img src="images/deal-logo.png">
+           </div>
+           <div class="col-9">
+            <h3 class="card-title">Great daily deal</h3>
+            <p class="text-muted">when you sign up</p>
+           </div>
+         </div>
+       </div>
+      </div>
+      <div class="card-group mt-4">
+        <div class="card shadow p-3">
+          <div class="row justify-content-between align-items-center">
+            <div class="col-3">
+             <img src="images/sort.png">
+            </div>
+            <div class="col-9">
+             <h3 class="card-title">Wide assortment</h3>
+             <p class="text-muted">mega discounts</p>
+            </div>
+          </div>
+        </div>
+        <div class="card shadow p-3">
+          <div class="row justify-content-between align-items-center">
+            <div class="col-3">
+             <img src="images/return.png">
+            </div>
+            <div class="col-9">
+             <h3 class="card-title">Easy return</h3>
+             <p class="text-muted">within 30 days</p>
+            </div>
+          </div>
+        </div>
+        <div class="card shadow p-3">
+          <div class="row justify-content-between align-items-center">
+            <div class="col-3">
+             <img src="images/guard.png">
+            </div>
+            <div class="col-9">
+             <h3 class="card-title">Safe delivery</h3>
+             <p class="text-muted">within 30 days</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <!-- end services -->
+
+  <!-- footer -->
+  <footer class="p-3">
+    <div class="container">
+      <div class="row justify-content-center g-5">
+        <div class="col-md-4">
+          <p class="logo mb-s"><i class="fas fa-tshirt me-2"></i>Reclothes</p>
+          <p><i class="fas fa-map-marker-alt me-2"></i><strong>Adress: </strong> 5171 W Campbell Ave undefined Kent, Utah 53127 United States</p>
+          <p><i class="fas fa-headset me-2"></i><strong>Call Us: </strong>(+91) - 540-025-124357</p>
+          <p><i class="fas fa-paper-plane me-2"></i><strong>Email: </strong>sale@mymail.com</p>
+          <p><i class="fas fa-clock me-2"></i><strong>Hours: </strong>09:00 - 17:00, Mon - Sat</p>
+        </div>
+        <div class="col-md-4">
+          <h4 class="ms-3">Company</h4>
+          <nav class="nav flex-column">
+            <a href="#" class="nav-link text-dark">About us</a>
+            <a href="#" class="nav-link text-dark">Delivery information</a>
+            <a href="#" class="nav-link text-dark">Privacy policy</a>
+            <a href="#" class="nav-link text-dark">Terms & conditions</a>
+            <a href="#" class="nav-link text-dark">Contact us</a>
+            <a href="#" class="nav-link text-dark">Support center</a>
+            <a href="#" class="nav-link text-dark">Careers</a>
+          </nav>
+        </div>
+        <div class="col-md-4">
+          <h4 class="ms-3">Account</h4>
+          <nav class="nav flex-column">
+            <a href="#" class="nav-link text-dark">Sign in</a>
+            <a href="#" class="nav-link text-dark">View cart</a>
+            <a href="#" class="nav-link text-dark">My wishlist</a>
+            <a href="#" class="nav-link text-dark">Track my order</a>
+            <a href="#" class="nav-link text-dark">Help ticket</a>
+            <a href="#" class="nav-link text-dark">Shipping details</a>
+            <a href="#" class="nav-link text-dark">Compare products</a>
+          </nav>
+        </div>
+        <div class="col-md-4">
+          <h4 class="ms-3">Corporate</h4>
+          <nav class="nav flex-column">
+            <a href="#" class="nav-link text-dark">Become a vendor</a>
+            <a href="#" class="nav-link text-dark">Affiliate program</a>
+            <a href="#" class="nav-link text-dark">Clothes business</a>
+            <a href="#" class="nav-link text-dark">Clothes careers</a>
+            <a href="#" class="nav-link text-dark">Our suppliers</a>
+            <a href="#" class="nav-link text-dark">Accessibility</a>
+            <a href="#" class="nav-link text-dark">Promotions</a>
+          </nav>
+        </div>
+        <div class="col-md-4">
+          <h4 class="ms-3">Popular</h4>
+          <nav class="nav flex-column">
+            <a href="#" class="nav-link text-dark">Dual tone hoodie</a>
+            <a href="#" class="nav-link text-dark">Long dress</a>
+            <a href="#" class="nav-link text-dark">Shirt for kids</a>
+            <a href="#" class="nav-link text-dark">High heels</a>
+            <a href="#" class="nav-link text-dark">Katun tuxedo</a>
+            <a href="#" class="nav-link text-dark">Jogger pants</a>
+            <a href="#" class="nav-link text-dark">Casual tshirt</a>
+          </nav>
+        </div>
+        <div class="col-md-4">
+          <h4>Install app</h4>
+          <div>
+            <p class="mt-4">from App Store or Play Store</p>
+            <div class="d-flex" style="gap: 1.5rem;">
+              <img src="images/app-store.jpg" width="170rem">
+              <img src="images/google-play.jpg" width="170rem">
+            </div>
+          </div>
+          <div>
+            <p class="mt-4">secured payment gateways</p>
+            <div class="d-flex" style="gap: 1.5rem;">
+              <img src="images/payment-method.png" width="280rem">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- end footer -->
+  
+  <!-- bootstrap js -->
+  <script src="../bootstrap-5/js/bootstrap.min.js"></script>
+  <!-- jquery -->
+  <script src="../jquery-3.6.0.js"></script>
+  <!-- js file -->
+  <script src="script.js"></script>
+</body>
+</html>

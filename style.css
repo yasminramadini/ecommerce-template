@@ -1,0 +1,316 @@
+@font-face {
+  font-family: 'Poppins';
+  src: url(../poppins/Poppins-Regular.ttf);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 1;
+  height: 100%; width: 100%;
+  display: none;
+}
+
+nav {
+  width: 100%;
+  background: rgb(243, 76, 15);
+}
+
+nav .logo {
+  font-size: 1.6rem;
+}
+
+nav .nav-icons {
+  font-size: 1.6rem;
+  cursor: pointer;
+  display: flex;
+  gap: 1.5rem;
+}
+
+aside {
+  left: 0; top: 0; bottom: 0;
+  width: 23rem;
+  z-index: -3;
+  padding: 7rem 2rem;
+  overflow-y: auto;
+  left: -800px;
+  transition: all 0.3s;
+  box-shadow: 0.4rem 0 3rem 3rem rgba(0, 0, 0, 0.2);
+  background: #fff;
+  z-index: 100;
+}
+
+aside.active {
+  left: 0;
+}
+
+.search {
+  background: rgb(236, 236, 236);
+  width: 100%;
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.3rem;
+}
+
+.search input {
+  border: none;
+  width: 85%;
+  outline: none;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+.search button {
+  background: transparent;
+  font-size: 1.2rem;
+  color: #333;
+  border: none;
+}
+
+.search button:hover {
+  color: rgb(243, 76, 15);
+}
+
+aside a {
+  color: #333;
+}
+
+header {
+  min-height: 100vh;
+  margin-top: 100px;
+}
+
+header .bg-1 {
+  background: rgb(219, 219, 219);
+  height: 100vh;
+}
+
+header .bg-1 div {
+  width: 50%;
+}
+
+header .bg-2 {
+  background: rgb(255, 215, 169);
+  height: 100vh;
+}
+
+header .bg-2 div {
+  width: 50%;
+}
+
+header .bg-1 #bg1-img {
+  object-fit: cover;
+  position: absolute;
+  bottom: -3rem; right: 3rem;
+  width: 30rem; height: 30rem;
+}
+
+header .bg-2 img {
+  object-fit: cover;
+  position: absolute;
+  bottom: -2rem; right: -5rem;
+  width: 50rem; height: 50rem;
+}
+
+.category {
+  background: #ddd;
+  width: 10rem; height: 13rem;
+}
+
+.category img {
+  width: 8rem; height: 8rem;
+  object-fit: cover;
+}
+
+.promo-1 {
+  height: 15rem;
+  background-image: url(images/banner-3.jpg);
+  background-size: cover;
+  position: relative;
+}
+
+.info-box {
+  position: absolute;
+  width: 80%;
+  border-radius: 0.8rem;
+  bottom: -5rem; left: 50%;
+  transform: translateX(-50%);
+}
+
+.info-box i {
+  color: rgb(240, 157, 34);
+}
+
+.cta {
+  background: rgb(243, 76, 15);
+  color: #fff;
+}
+
+#products {
+  margin-top: 10rem;
+}
+
+.card .stars i, .card .brand,  .card .price {
+  color: rgb(240, 157, 34);
+}
+
+#products .card:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+#products .card {
+  height: 31rem;
+}
+
+#products .card img {
+  height: 15rem; width: 15rem;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+#trending .card img {
+  width: 7rem; height: 7rem;
+  object-fit: cover;
+}
+
+#trending h4::after {
+  content: '';
+  background: rgb(240, 157, 34);
+  bottom: -0.1rem; left: 0;
+  width: 10rem; height: 0.1rem;
+  position: absolute;
+}
+
+#subscribe {
+  background: #ddd;
+  height: 25rem;
+  border-radius: 0.8rem;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+#subscribe img {
+  right: 0; bottom: -25rem;
+  position: absolute;
+  height: 50rem;
+}
+
+#subscribe .content {
+  width: 50%;
+}
+
+#subscribe .content form {
+  width: 100%;
+}
+
+#subscribe .content form input {
+  width: 100%;
+  border: none; outline: none;
+}
+
+#services {
+  margin-bottom: 7rem;
+}
+
+#services .card {
+  background: #fff;
+  margin: 0 0.5rem;
+}
+
+#services .card img {
+  width: 100%;
+}
+
+footer {
+  margin-top: auto;
+}
+
+footer .logo {
+  font-size: 3rem;
+  color: rgb(240, 157, 34);
+  font-weight: bold;
+}
+
+footer i {
+  color: rgb(240, 157, 34);
+}
+
+footer nav {
+  background: transparent;
+}
+
+footer h3 {
+  font-weight: bolder;
+}
+
+footer a.nav-link:hover {
+  color: rgb(240, 157, 34);
+  margin-left: 1rem;
+  transition: all 0.3s;
+}
+
+/* mobile */
+@media screen and (max-width: 990px) {
+  header .bg-1 #bg1-img {
+    width: 10rem; height: 10rem;
+    bottom: 0; right: 1rem;
+  }
+
+  header .bg-1 div {
+    width: 90%;
+    position: absolute;
+    z-index: 2;
+  }
+
+  nav .logo {
+    font-size: 1.2rem;
+  }
+
+  nav .nav-icons {
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    gap: 1rem;
+  }
+
+  header .bg-2 img {
+     object-fit: cover; 
+    position: absolute;
+    bottom: 0; right: -12rem; 
+    width: 31rem; height: 31rem;
+  }
+
+  header .bg-2 div {
+    width: 80%;
+  }
+
+  .promo-1 {
+    margin-bottom: 8rem;
+  }
+
+  #trending .card img {
+    width: 5rem; height: 5rem;
+  }
+
+  #subscribe img {
+    right: -5rem; bottom: -8rem;
+    position: absolute;
+    height: 30rem;
+  }
+
+  #subscribe .content {
+    width: 70%;
+  }
+
+  footer .logo {
+    font-size: 2rem;
+  }
+}
