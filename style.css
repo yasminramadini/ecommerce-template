@@ -295,13 +295,11 @@ footer a.nav-link:hover {
   }
 
   #subscribe img {
-    right: -5rem; bottom: -8rem;
-    position: absolute;
-    height: 30rem;
+    display: none;
   }
 
   #subscribe .content {
-    width: 70%;
+    width: 100%;
   }
 
   footer .logo {
