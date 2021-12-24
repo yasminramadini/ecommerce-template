@@ -279,14 +279,11 @@ footer a.nav-link:hover {
   }
 
   header .bg-2 img {
-     object-fit: cover; 
-    position: absolute;
-    bottom: 0; right: -12rem; 
-    width: 31rem; height: 31rem;
+    display: none;
   }
 
   header .bg-2 div {
-    width: 80%;
+    width: 90%;
   }
 
   .promo-1 {
