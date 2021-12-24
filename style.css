@@ -80,7 +80,7 @@ aside a {
 }
 
 header {
-  height: 400px;
+  min-height: 100vh;
   margin-top: 100px;
 }
 
